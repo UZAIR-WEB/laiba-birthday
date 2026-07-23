@@ -1,0 +1,1133 @@
+/* ==========================================
+   HAPPY BIRTHDAY WEBSITE
+   STYLE.CSS - PART 1
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow:hidden;
+
+    background:#070b23;
+
+    color:white;
+
+    height:100vh;
+
+}
+
+/* ===========================
+   Animated Background
+=========================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+left:0;
+
+top:0;
+
+background:
+
+linear-gradient(135deg,#050816,#120136,#1b1464,#4b0082);
+
+z-index:-5;
+
+}
+
+/* ===========================
+Stars
+=========================== */
+
+.stars{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px,transparent 1px);
+
+background-size:35px 35px;
+
+opacity:.35;
+
+animation:starsMove 60s linear infinite;
+
+z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+background-position:0 0;
+
+}
+
+to{
+
+background-position:0 1200px;
+
+}
+
+}
+
+/* ===========================
+Main Container
+=========================== */
+
+.container{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+/* ===========================
+Heading
+=========================== */
+
+.smallText{
+
+font-size:22px;
+
+font-weight:300;
+
+color:#ffe8f3;
+
+margin-bottom:20px;
+
+animation:fade 2s infinite alternate;
+
+}
+
+.title{
+
+font-size:75px;
+
+font-weight:800;
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 25px hotpink,
+
+0 0 45px deeppink;
+
+}
+
+.name{
+
+margin-top:10px;
+
+font-size:60px;
+
+font-weight:700;
+
+color:#ff8fc8;
+
+text-shadow:
+
+0 0 15px deeppink,
+
+0 0 30px deeppink;
+
+}
+
+.subtitle{
+
+margin-top:15px;
+
+font-size:22px;
+
+opacity:.9;
+
+}
+
+/* ===========================
+Gift Button
+=========================== */
+
+#giftBtn{
+
+margin-top:45px;
+
+width:150px;
+
+height:150px;
+
+border:none;
+
+border-radius:50%;
+
+font-size:75px;
+
+cursor:pointer;
+
+background:white;
+
+box-shadow:
+
+0 0 20px white,
+
+0 0 40px hotpink;
+
+transition:.4s;
+
+animation:bounce 2s infinite;
+
+}
+
+#giftBtn:hover{
+
+transform:scale(1.1);
+
+background:#ffe3ef;
+
+box-shadow:
+
+0 0 35px white,
+
+0 0 70px hotpink;
+
+}
+
+.clickText{
+
+margin-top:20px;
+
+font-size:20px;
+
+letter-spacing:2px;
+
+color:#ffd9ea;
+
+}
+
+/* ===========================
+Animations
+=========================== */
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:.4;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ===========================
+Birthday Section
+=========================== */
+
+#birthdayPage{
+
+display:none;
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100vh;
+
+text-align:center;
+
+padding-top:70px;
+
+background:
+
+linear-gradient(135deg,#2b1055,#4b0082,#7b1fa2);
+
+overflow:hidden;
+
+}
+
+.birthdayTitle{
+
+font-size:70px;
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 30px gold,
+
+0 0 60px orange;
+
+}
+
+.birthdayName{
+
+margin-top:15px;
+
+font-size:50px;
+
+color:#ffd6e7;
+
+}
+
+.cake{
+
+font-size:130px;
+
+margin-top:30px;
+
+animation:cakeBounce 2s infinite;
+
+}
+
+@keyframes cakeBounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+#message{
+
+margin:auto;
+
+margin-top:35px;
+
+max-width:800px;
+
+font-size:24px;
+
+line-height:1.9;
+
+padding:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:20px;
+
+box-shadow:0 0 20px rgba(255,255,255,.2);
+
+}
+/* ==========================================
+   STYLE.CSS - PART 2
+========================================== */
+
+/* ===========================
+   Surprise Button
+=========================== */
+
+#surpriseBtn{
+
+    margin-top:40px;
+
+    padding:18px 45px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(45deg,#ff1493,#ff69b4);
+
+    box-shadow:
+    0 0 20px #ff1493,
+    0 0 45px #ff1493;
+
+    transition:.35s;
+
+}
+
+#surpriseBtn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 30px #ff1493,
+    0 0 70px #ff1493;
+
+}
+
+/* ===========================
+   Final Page
+=========================== */
+
+#finalPage{
+
+    display:none;
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:linear-gradient(135deg,#050816,#1b1464,#7b1fa2);
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+#finalPage h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 15px white,
+    0 0 40px hotpink;
+
+}
+
+#finalPage h2{
+
+    font-size:45px;
+
+    color:#ffd9ea;
+
+}
+
+#finalPage p{
+
+    margin-top:20px;
+
+    font-size:25px;
+
+}
+
+.bigHeart{
+
+    margin-top:40px;
+
+    font-size:150px;
+
+    animation:heartBeat 1s infinite;
+
+}
+
+@keyframes heartBeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* ===========================
+   Floating Hearts
+=========================== */
+
+#hearts{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   Floating Balloons
+=========================== */
+
+#balloons{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-150px;
+
+    animation:floatBalloon linear forwards;
+
+}
+
+@keyframes floatBalloon{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-130vh);
+
+}
+
+}
+
+/* ===========================
+   Sparkles
+=========================== */
+
+.sparkle{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:18px;
+
+    animation:sparkle 2s linear forwards;
+
+}
+
+@keyframes sparkle{
+
+0%{
+
+opacity:0;
+
+transform:scale(.2);
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-120px) scale(1.5);
+
+}
+
+}
+
+/* ===========================
+   Glass Card Effect
+=========================== */
+
+.glass{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:20px;
+
+    box-shadow:0 0 25px rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.fadeIn{
+
+    animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+   Glow Animation
+=========================== */
+
+.glow{
+
+    animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:
+0 0 10px white,
+0 0 20px hotpink;
+
+}
+
+to{
+
+text-shadow:
+0 0 20px white,
+0 0 50px deeppink;
+
+}
+
+}/* ==========================================
+   STYLE.CSS - PART 3 (FINAL)
+========================================== */
+
+/* ===========================
+   Canvas
+=========================== */
+
+#canvas{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:5;
+
+}
+
+/* ===========================
+   Audio
+=========================== */
+
+audio{
+
+    display:none;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff1493;
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   Selection
+=========================== */
+
+::selection{
+
+    background:#ff1493;
+
+    color:white;
+
+}
+
+/* ===========================
+   Smooth Transition
+=========================== */
+
+*{
+
+    transition:.35s;
+
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+.float{
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+/* ===========================
+   Rotate Animation
+=========================== */
+
+.rotate{
+
+    animation:rotate 10s linear infinite;
+
+}
+
+@keyframes rotate{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* ===========================
+   Zoom Animation
+=========================== */
+
+.zoom{
+
+    animation:zoom 2s infinite alternate;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.05);
+
+}
+
+}
+
+/* ===========================
+   Shake
+=========================== */
+
+.shake:hover{
+
+    animation:shake .5s;
+
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+25%{transform:translateX(-5px);}
+50%{transform:translateX(5px);}
+75%{transform:translateX(-5px);}
+100%{transform:translateX(0);}
+
+}
+
+/* ===========================
+   Cake Glow
+=========================== */
+
+.cake{
+
+    filter:drop-shadow(0 0 25px gold);
+
+}
+
+/* ===========================
+   Message Glow
+=========================== */
+
+#message{
+
+    color:white;
+
+    text-shadow:0 0 10px rgba(255,255,255,.3);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.title{
+
+font-size:55px;
+
+}
+
+.name{
+
+font-size:42px;
+
+}
+
+.birthdayTitle{
+
+font-size:50px;
+
+}
+
+.birthdayName{
+
+font-size:36px;
+
+}
+
+#message{
+
+font-size:20px;
+
+width:90%;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.smallText{
+
+font-size:18px;
+
+}
+
+.title{
+
+font-size:42px;
+
+}
+
+.name{
+
+font-size:30px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+#giftBtn{
+
+width:110px;
+
+height:110px;
+
+font-size:55px;
+
+}
+
+.clickText{
+
+font-size:17px;
+
+}
+
+.birthdayTitle{
+
+font-size:38px;
+
+}
+
+.birthdayName{
+
+font-size:28px;
+
+}
+
+.cake{
+
+font-size:90px;
+
+}
+
+#message{
+
+font-size:17px;
+
+line-height:1.7;
+
+padding:18px;
+
+}
+
+#surpriseBtn{
+
+padding:14px 28px;
+
+font-size:18px;
+
+}
+
+#finalPage h1{
+
+font-size:42px;
+
+}
+
+#finalPage h2{
+
+font-size:28px;
+
+}
+
+#finalPage p{
+
+font-size:18px;
+
+}
+
+.bigHeart{
+
+font-size:90px;
+
+}
+
+}
+
+/* Small Phones */
+
+@media(max-width:480px){
+
+.title{
+
+font-size:34px;
+
+}
+
+.name{
+
+font-size:24px;
+
+}
+
+#giftBtn{
+
+width:90px;
+
+height:90px;
+
+font-size:45px;
+
+}
+
+.birthdayTitle{
+
+font-size:30px;
+
+}
+
+.cake{
+
+font-size:70px;
+
+}
+
+#message{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+   END OF FILE
+========================================== */
